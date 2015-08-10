@@ -1,0 +1,47 @@
+      <!DOCTYPE html>
+        <html>
+
+          <head>
+            <meta charset="utf-8" />
+            <title>Mad Libs</title>
+            <link rel="stylesheet" media="screen" href="css/interactive-story.css" />
+          </head>
+
+          <body>
+            <h1>MAD LIB</h1>
+            <ul id="fillin">
+              <li>NOUN: <input type="text" id="noun">
+              <li>ADJECTIVE: <input type="text" id="adjective">
+              <li>NAME: <input type="text" id="name">
+              <li>VERB: <input type="text" id="verb">
+              <li>NOUN: <input type="text" id="noun">
+              <li>ADJECTIVE: <input type="text" id="adjective">
+              <li>ADVERB: <input type="text" id="adverb">
+              <li>EXCLAMATION: <input type="text" id="exclamation">
+            </ul>
+            <div style="text-align:center">
+              <button id="lib-button">Generate!</button>
+            </div>
+            <div id="story"></div>
+          </body>
+        </html>
+
+      <script>
+      function libIt() {
+      var storyDiv = document.getElementById("story");
+      
+      var noun = document.getElementById("noun").value;
+      var adjective = document.getElementById("adjective").value;
+      var name = document.getElementById("name").value;
+      var verb = document.getElementById("verb").value;
+      var noun = document.getElementById("noun").value;
+      var adjective = document.getElementById("adjective").value;
+      var adverb = document.getElementById("adverb").value;
+      var exclamation = document.getElementById("exclamation").value;
+
+      storyDiv.innerHTML = name + " one day decided that it was important to learn the " + adjective + " business of JavaScript. " + name + " logged onto Codecademy and thought, 'I wish I had a " + noun + "!' Nevertheless, " + name + " continued to " + verb + " until the " + adjective + " " + noun + " was " + adverb + " yelling " + exclamation + "!!";
+    }
+
+    var libButton = document.getElementById('lib-button');
+    libButton.addEventListener('click', libIt);
+    </script>
